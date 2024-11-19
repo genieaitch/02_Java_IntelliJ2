@@ -15,7 +15,7 @@ public class Menu {
         System.out.print("3. 카푸치노 - 4500원");
         System.out.print("4. 주문종료");
 
-        while (true) {
+        while (is) {
             System.out.println("메뉴를 선택해주세요(1~4) : ");
             int choice = sc.nextInt();
 
