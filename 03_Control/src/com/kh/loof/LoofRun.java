@@ -18,6 +18,12 @@ public class LoofRun {
         l2.While4();
     }
 
+    Menu m = new Menu();
+        //m.order();
+
+    LoofDowhile ldw = new LoofDowhile();
+    ldw.method1();
+
     /*public void abc() {
         LoofEx l = new LoofEx();
         l.method1();
