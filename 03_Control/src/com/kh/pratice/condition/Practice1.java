@@ -131,10 +131,57 @@ public class Practice1 {
         }
     }
 
-        public void method10(){
-            while(true){
-                System.out.println("***실행할 기능을 선택하세요***");
+    public void method6(){
+        // switch문 활용
+        System.out.print("1. 관리자, 2. 회원, 3. 비회원 중 등급을 숫자로 입력하세요 : ");
+        int grade = sc.nextInt();
 
+        switch (grade) {
+            case 1:
+                System.out.println("등급 : 관리자");
+                System.out.println("권한 : 회원관리, 게시글 관리, 게시글 작성, 댓글 작성, 게시글 조회");
+                break;
+            case 2:
+                System.out.println("등급 : 회원");
+                System.out.println("권한 : 게시글 작성, 댓글 작성, 게시글 조회");
+                break;
+            case 3:
+                System.out.println("등급 : 비회원");
+                System.out.println("권한 : 게시글 조회");
+                break;
+            default:
+                System.out.println("등급을 잘못입력하셨습니다. 다시 입력해 주세요.");
+                break;
+        }
+
+        //if문 활용
+        System.out.print("관리자, 회원, 비회원 중 등급을 입력하세요 : ");
+        String inputrol = sc.next();
+
+        String admin = "관리자";
+        String member = "회원";
+        String nonMember = "비회원";
+
+        if(inputrol.equals(admin)){
+            System.out.println("등급 : 관리자");
+            System.out.println("권한 : 회원관리, 게시글 관리, 게시글 작성, 댓글 작성, 게시글 조회");
+        } else if(inputrol.equals(member)){
+            System.out.println("등급 : 회원");
+            System.out.println("권한 : 게시글 작성, 댓글 작성, 게시글 조회");
+        } else if(inputrol.equals(nonMember)){
+            System.out.println("등급 : 비회원");
+            System.out.println("권한 : 게시글 조회");
+        } else{
+            System.out.println("등급을 잘못입력하셨습니다. 다시 입력해 주세요.");
+        }
+    }
+
+        public void method10(){
+
+            while(true){
+                boolean isTrue = true;
+
+                System.out.println("***실행할 기능을 선택하세요***");
                 System.out.println("1. 메뉴 출력");
                 System.out.println("2. 짝수/홀수");
                 System.out.println("3. 합격/불합격");
@@ -148,7 +195,8 @@ public class Practice1 {
                 System.out.print("선택 : ");
                 
                 int choice = sc.nextInt(); //사용자가 번호를 선택하도록 입력하는 공간 생성
-                
+                sc.nextLine();//한 줄 공백이 있을 경우 날림처리
+
                 switch (choice) {
                 case 1:
                     method1();//외부에서 기능을 특정적으로 실행하지 않을 때는 내부에서만 기능 불러오기를 진행할 때 기능 명칭과 ()만 작성해주면 됨
@@ -164,12 +212,16 @@ public class Practice1 {
                     case 5:
                     method5();
                     break;
-                    case 3: case 6: case 7: case 8: case 9:
+                    case 6:
+                    method6();
+                    break;
+                    case 3: case 7: case 8: case 9:
                     System.out.println("기능 준비중입니다.");
                     break;
                     case 0:
                     System.out.println("프로그램을 종료합니다");
                     //while 옆에 true로 적힌 부분을 변수 isTrue에 담아서 추후 isTrue = false로 표현해서 종료하게 만들기
+                        isTrue = false;
                         break;
                     default:
                         System.out.println("잘못된 입력입니다. 다시 선택해주세요.");
