@@ -61,9 +61,9 @@ public class ArrayEx3 {
                 {"포도", "보라", "달콤", "작음"}//과일3(포도)의 정보가 들어있는 index 2번
         };
         //각 과일의 정보 출력
-        System.out.println("과일 1 : "+fruits[0][0]+" (색상 : )"+fruits[0][1]+",맛 : " +fruits[0][2]+", 크기 : " +fruits[0][3]+ ")");
-        System.out.println("과일 2 : "+fruits[1][0]+" (색상 : )"+fruits[1][1]+",맛 : " +fruits[1][2]+", 크기 : " +fruits[1][3]+ ")");
-        System.out.println("과일 3 : "+fruits[2][0]+" (색상 : )"+fruits[2][1]+",맛 : " +fruits[2][2]+", 크기 : " +fruits[2][3]+ ")");
+        System.out.println("과일 1 : "+fruits[0][0]+" (색상 : "+fruits[0][1]+", 맛 : " +fruits[0][2]+", 크기 : " +fruits[0][3]+ ")");
+        System.out.println("과일 2 : "+fruits[1][0]+" (색상 : "+fruits[1][1]+", 맛 : " +fruits[1][2]+", 크기 : " +fruits[1][3]+ ")");
+        System.out.println("과일 3 : "+fruits[2][0]+" (색상 : "+fruits[2][1]+", 맛 : " +fruits[2][2]+", 크기 : " +fruits[2][3]+ ")");
         /*
         * 주의해야할 점
         * 없는 자리에 있는 값을 가져오려하면 문제가 발생
