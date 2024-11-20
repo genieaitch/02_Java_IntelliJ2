@@ -22,7 +22,7 @@ public class LoofRun {
         //m.order();
 
     LoofDowhile ldw = new LoofDowhile();
-    ldw.method1();
+    //ldw.method1();
 
     /*public void abc() {
         LoofEx l = new LoofEx();

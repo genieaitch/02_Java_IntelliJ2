@@ -10,6 +10,7 @@ public class Practice1Run {
         practice1.method2();
         System.out.println("===로그인 문제===");
         //practice1.method3();
+        practice1.method4();
     }
 
 
