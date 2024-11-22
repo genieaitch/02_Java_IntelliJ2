@@ -3,24 +3,27 @@ package com.kh.oop.methodPre;
 public class ReturnRun2 {
     public static void main(String[] args) {
 
-        ReturnPre2 r = new ReturnPre2();
-        System.out.println("===이름, 나이 소개===");
-        r.method1();
-        System.out.println("===숫자 비교===");
-        r.method2();
+        ReturnPre2 pre = new ReturnPre2();
+
+        pre.method1("홍길동", 40);
+        System.out.println("method 1번 출력확인 : " );
+
+        pre.method2(123, 456);
+        System.out.println("method2 2번 출력확인 : " + pre.method2(123, 456));
+
         System.out.println("===등급 확인===");
-        r.method3();
+        pre.method3();
         System.out.println("===할인된 금액 확인===");
-        r.method4();
+        pre.method4(100000,20);
         System.out.println("===배열 평균값 반환===");
-        r.method5();
+        pre.method5();
         System.out.println("===성인 확인===");
-        r.method6();
+        pre.method6(17);
         System.out.println("===문자 연결===");
-        r.method7();
+        pre.method7();
         System.out.println("===과일 찾기===");
-        r.method8();
+        //pre.method8("apple","banana");
         System.out.println("===원 넓이 확인===");
-        r.method9();
+        pre.method9();
     }
 }

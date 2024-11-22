@@ -6,20 +6,33 @@ import java.util.Scanner;
 public class ReturnPre2 {
     //1. 이름과 나이를 입력받아 소개 메시지 반환
     //안녕하세요! 제 이름은 홍길동이고, 나이는 40세 입니다.
-    Scanner sc = new Scanner(System.in);
 
+    public String method1(String name, int age){
+        return "안녕하세요! 제 이름은 " + name + "이고, 나이는 " + age + "세 입니다.";
+    }
+
+    Scanner sc = new Scanner(System.in);
+/*
     public void method1() {
         System.out.print("이름을 입력해 주세요 : ");
         String name = sc.next();
         System.out.print("나이를 입력해 주세요 : ");
         int age = sc.nextInt();
         System.out.println("안녕하세요! 제 이름은 " + name + "이고, 나이는 " + age + "세 입니다.");
-    }
+    }*/
 
     //2. 두 숫자를 입력받아 가장 큰 숫자 반환 Scanner X
     //num1과 num2 비교해서 큰 값의 숫자를 출력
     //000보다 0000이 큰 숫자입니다.
-    public void method2() {
+    public String method2(int num1, int num2) {
+        if (num1 > num2) {
+            return num2 + "보다" + num1 + "이 큰 숫자입니다.";
+        } else {
+            return num1 + "보다" + num2 + "이 큰 숫자입니다.";
+        }
+
+    /*public void method2() {
+
         System.out.print("첫 번째 숫자를 입력해주세요(정수) : ");
         int num1 = sc.nextInt();
         System.out.print("두 번째 숫자를 입력해주세요(정수) : ");
@@ -33,7 +46,7 @@ public class ReturnPre2 {
                 System.out.println(num1 + "보다 " + num2 + "이(가) 더 큰 숫자입니다.");
             }
         }
-        /*if(num1 > num2){
+        if(num1 > num2){
         System.out.println(num2+"보다 "+num1+"이 더 큰 숫자입니다.");
         }else if(num1 < num2){
             System.out.println(num1+"보다 "+num2+"이(가) 더 큰 숫자입니다.");
@@ -76,7 +89,12 @@ public class ReturnPre2 {
 
     //4. 상품 가격과 할인율을 입력받아 최종 금액 반환
 
-    public void method4() {
+    public String method4(double price, double discountRate) {
+        double totalPrice = price - (price * discountRate / 100);
+        return "원래가격 : " + price + "원 할인율 : " + discountRate + "%최종금액 : " + totalPrice + "원";
+    }
+
+    /*public void method4() {
         System.out.print("상품 가격을 입력하세요 : ");
         int price = sc.nextInt();
         System.out.print("할인율을 입력하세요(숫자만) : ");
@@ -85,7 +103,7 @@ public class ReturnPre2 {
         int lastPrice = price - price * discount / 100;
 
         System.out.println("원래 가격 : " + price + "할인율 : " + discount + "% 최종 금액 : " + lastPrice + "원");
-    }
+    }*/
 
     //5. 배열의 평균값 반환
     public void method5() {
@@ -102,7 +120,14 @@ public class ReturnPre2 {
     }
 
     //6. 주어진 나이가 성인인지 확인하고 메시지 반환
-    public void method6() {
+
+    public String method6(int age) {
+        //삼항연산자 : (조건식)?true:false;
+        String result = (age >= 19) ? "성인입니다." : "미성년자입니다.";
+        return "나이 : " + age + " 결과 : " + result;
+    }
+
+    /*public void method6() {
         System.out.print("나이를 입력해주세요 : ");
         int age = sc.nextInt();
 
@@ -111,7 +136,7 @@ public class ReturnPre2 {
         } else {
             System.out.println("나이 : " + age + " 결과 : 미성년자입니다.");
         }
-    }
+    }*/
 
     //7. 두 문자열을 연결한 뒤 반환
     public void method7() {
@@ -124,7 +149,19 @@ public class ReturnPre2 {
     }
 
     //8. 특정 문자열이 배열에 존재하는지 확인 후 결과 반환
-    public void method8() {
+    public String method8(String[] arr, String target) {
+        boolean found = false;
+
+        for(String str : arr) {
+            if (str.equals(target)) { found = true; break; }
+        }
+        if (found) {
+            return "배열에" + target + "이(가 존재합니다.";
+        } else {
+            return "배열에" + target + "이(가) 존재하지 않습니다.";
+        }
+    }
+    /*public void method8() {
         System.out.print("과일을 작성해 주세요 : ");
         String search = sc.next();
 
@@ -143,7 +180,7 @@ public class ReturnPre2 {
         } else {
             System.out.print("배열에 " + search + "이(가) 존재하지 않습니다.");
         }
-    }
+    }*/
 
     //9. 반지름을 입력받아 원의 넓이 반환
     /*(반지름을 입력받아 원의 넓이를 구하는 공식:  Math.PI * radius * radius)
