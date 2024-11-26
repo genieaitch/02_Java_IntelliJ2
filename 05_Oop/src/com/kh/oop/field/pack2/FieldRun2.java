@@ -5,7 +5,7 @@ import com.kh.oop.field.pack1.FieldEx1;
 //                             프로텍트필드를 상속하더라도 Static main()기능에 바로 올라올 순 없음
 // public return method(){}  public void method(){}
 //         method{} 내부에 작성해서 사용하기만 가능
-public class FieldRun2 {
+public class FieldRun2 extends FieldEx1 {
     public static void main(String[] args) {
 
         //FieldEx1 public 이기 때문에
@@ -16,12 +16,13 @@ public class FieldRun2 {
         //System.out.println(f1.프로텍트필드); //같은 패키지 or 다른패키지 상속
         //System.out.println(f1.디폴드필드); // only 같은 패키지만 ok
         //System.out.println(f1.프라이빗필드); //같은 클래스만
-
-        //public void method1() {
+    }
+        public void method1() {
             //상속을 진행한다는 것은 상속이후에 특정 변화가 일어나고
             // 변화가 일어난 이후의 값을 기능에 담아 static 전달
             //다른 패키지이지만 상속 상태이기 때문에 기능 내부에 호출에서 사용
-            //System.out.println(프로텍트필드);
+            System.out.println(프로텍트필드);
         }
     }
+
 

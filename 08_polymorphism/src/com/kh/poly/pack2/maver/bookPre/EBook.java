@@ -1,8 +1,10 @@
 package com.kh.poly.pack2.maver.bookPre;
 
 public class EBook extends Book {
+    //필드
     private String fileSize;
 
+    //메서드 기본 필수 세터 게터 toString
     public EBook(){
         super();
     }
@@ -22,8 +24,8 @@ public class EBook extends Book {
 
     @Override
     public String toString() {
-        return "EBook{" + super.toString()+
-                "fileSize='" + fileSize + '\'' +
+        return super.toString()+
+                "파일 크기='" + fileSize + '\'' +
                 '}';
     }
 }

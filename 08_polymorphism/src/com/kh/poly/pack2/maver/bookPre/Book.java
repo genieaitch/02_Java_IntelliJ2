@@ -40,10 +40,10 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", price=" + price +
+        return "책 정보{" +
+                "제목='" + title + '\'' +
+                ", 저자='" + author + '\'' +
+                ", 가격=" + price +
                 '}';
     }
 }

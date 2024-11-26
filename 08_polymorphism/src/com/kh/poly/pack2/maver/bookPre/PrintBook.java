@@ -22,8 +22,8 @@ public class PrintBook extends Book {
 
     @Override
     public String toString() {
-        return "PrintBook{" + super.toString() +
-                "shippingCost=" + shippingCost +
+        return super.toString() +
+                "배송비=" + shippingCost +
                 '}';
     }
 }

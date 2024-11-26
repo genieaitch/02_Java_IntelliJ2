@@ -10,6 +10,7 @@ public class FieldEx1Run {
         System.out.println(f1.퍼블릭필드);
         System.out.println(f1.프로텍트필드);
         System.out.println(f1.디폴드필드);
+
         //private은 접근 불가 - 다른클래스에서 변수명에 한 번에 접근할 수가 없기 때문
         //System.out.println(f1.프라이빗필드);
     }
