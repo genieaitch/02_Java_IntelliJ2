@@ -100,5 +100,17 @@ public class ArrayListPre1 {
         charList.add('b');
         charList.add('나');
         System.out.println("CharList : "+charList);
+
+        //3. 논리 타입 제한 true false 리스트 저장
+        ArrayList<Boolean> boolList = new ArrayList<Boolean>();
+        boolList.add(true);
+        boolList.add(false);
+        System.out.println("BoolList : "+boolList);
+
+        //4. 실수(double) 타입 제한
+        ArrayList<Double> doubleList = new ArrayList<Double>();
+        doubleList.add(1.5);
+        doubleList.add(3.14);
+        System.out.println("DoubleList : "+doubleList);
     }
 }
