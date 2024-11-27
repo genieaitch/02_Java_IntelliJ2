@@ -85,6 +85,32 @@ public class BookService {
         System.out.println(bookList);
         System.out.println("책이 성공적으로 추가되었습니다.");
     }
+
+    //2. 책 제거하기 기능 설정하자!
+    public void removeBook(String title) {
+        //책 제목을 통해 책목록들에서 선택한 책을 제거하는 기능
+        boolean found = false; //책 삭제 여부를 확인하는 변수 책을 찾거나 삭제한 상태가 아니기 때문에 false
+        
+        for(int i = 0; i < bookList.size(); i++) {
+            /*
+            책 제목에서 가져온 index번호에 적혀있는 책제목에서 내가 찾고자하는 것과 똑같은 것이 존재한다면 책제목
+            bookList    .get(i)            .getTitle()          .equals                                    (title)
+            */
+            if(bookList.get(i).getTitle().equals(title)) {
+                bookList.remove(i); //책 제거
+                System.out.println("책이 성공적으로 삭제되었습니다 : " + title);
+                found = true;
+                break; //삭제 후 더 이상 반복할 필요가 없음
+            }
+        }
+        //원하는 책제목을 찾지 못했다면 해당하는 책 제목을 찾을 수 없습니다. 보여주기
+        //found == false 책을 찾지 못한게 맞을 경우 = true
+        //found == false를 줄여서 !found
+        if(!found) {
+            System.out.println("해당 제목의 책을 찾을 수 없습니다. :" + title);
+        }
+    }
+
     //3번 저장된 책을 모두 확인하기
     // Book = 챡제목, 저자, 가격 = 하나의 세트
     //index 0번에 저장된 값들 = {title='나는책이다.', author='KHT', price=30000}

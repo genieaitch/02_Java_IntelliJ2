@@ -31,8 +31,8 @@ public class ClothingStoreRun {
                     cs.allClothing();
                     break;
                 case 3:
-                    System.out.println("옷이 삭제되었습니다.");
-                    return;
+                    cs.removeClothing();
+                    break;
                 case 4:
                     System.out.println("옷가게를 종료합니다.");
                     return;
