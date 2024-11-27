@@ -27,7 +27,7 @@ public class DrinkServiceRun {
                     System.out.println("--- 음료 추가하기 ---");
                     System.out.print("음료 이름을 입력하세요 : ");
                     String drinkName = scanner.nextLine();
-                    System.out.println("음료 가격을 입력하세요 : ");
+                    System.out.print("음료 가격을 입력하세요 : ");
                     int drinkPrice = scanner.nextInt();
                     drinkService.addDrink(drinkName, drinkPrice);
                     break;

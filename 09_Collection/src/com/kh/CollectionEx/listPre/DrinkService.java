@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class DrinkService {
     //1. Drink 객체 생성 d
-    private ArrayList<String> drinks = new ArrayList<String>();
+    private ArrayList<Drink> drinks = new ArrayList<Drink>();
 
     //2. Drink 음료 이름 가격 추가
 
