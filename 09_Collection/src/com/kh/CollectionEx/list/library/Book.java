@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Book {
     private String title;
     private String author;
-    private int pages;
+    private String pages;
     private int price;
 
     public Book() {
     }
 
-    public Book(String title, String author, int pages, int price) {
+    public Book(String title, String author, String pages, int price) {
         this.title = title;
         this.author = author;
         this.pages = pages;
@@ -34,11 +34,11 @@ public class Book {
         this.author = author;
     }
 
-    public int getPages() {
+    public String getPages() {
         return pages;
     }
 
-    public void setPages(int pages) {
+    public void setPages(String pages) {
         this.pages = pages;
     }
 

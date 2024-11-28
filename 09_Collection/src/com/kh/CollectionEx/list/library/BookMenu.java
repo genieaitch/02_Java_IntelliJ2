@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class BookMenu {
     private ArrayList<Book> books = new ArrayList<>();
 
-    public void insertBook(String title, String author, int pages, int price) {
+    public void insertBook(String title, String author, String pages, int price) {
         Book b = new Book(title, author, pages, price);
         books.add(b);
         System.out.println(title + "추가되었습니다.");
@@ -39,7 +39,7 @@ public class BookMenu {
         }
     }
 
-        public void deleteBook () {
+        public void deleteBook (String title, String author) {
             for (Book book : books) {
                 if (book.getTitle().equals(book.getAuthor())) {
                     books.remove(book);
@@ -50,4 +50,4 @@ public class BookMenu {
             }
         }
     }
-}
+
