@@ -49,7 +49,7 @@ public class BookMenuRun {
 
                         System.out.print("가격 : ");
                         int price = scanner.nextInt();
-                        bookMenu.insertBook(title, author, pages, price);
+                        bookMenu.insertBook(title, author, genre, price);
                         break;
                         case 2:
                             bookMenu.selectList();

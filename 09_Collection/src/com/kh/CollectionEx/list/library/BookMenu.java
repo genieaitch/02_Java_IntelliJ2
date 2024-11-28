@@ -13,51 +13,40 @@ public class BookMenu {
     }
 
     public void selectList() {
-        ArrayList<Book> bookList = new ArrayList<>();
-        bookList.addAll(books);
         if (books.isEmpty()) {
             System.out.println("존재하는 도서가 없습니다.");
         } else {
-            System.out.println(bookList);
+            for (Book b : books)
+                System.out.println(b);
         }
     }
 
-    public void searchBook() {
-        Scanner scanner = new Scanner(System.in);
-        int pages = scanner.nextInt();
+    public void searchBook(String title) {
         ArrayList<Book> searchList = new ArrayList<>();
+        for (Book b : books) {
+            if (b.getTitle().contains(title)) {
+                searchList.add(b);
+            }
+            ;
+        }
 
-        /*switch (pages) {
-            case 1:
-                System.out.println("인문");
-                break;
-            case 2:
-                System.out.println("자연과학");
-                break;
-            case 3:
-                System.out.println("의료");
-                break;
-            case 4:
-                System.out.println("기타");
-                break;
-            default:
-                System.out.println("번호로 입력해주세요");
-                return;
-
-        }*/
-        if (books.isEmpty()) {
-            System.out.println("검색 결과가 없습니다.");
+        if (searchList.isEmpty()) {
+            System.out.println("검색 결과가 없습니다");
         } else {
-            System.out.println(searchList);
+            for (Book b : searchList) {
+                System.out.println(b);
+            }
         }
     }
-    public void deleteBook(){
-        for (Book book : books) {
-            if (book.getTitle().equals(book.getAuthor())) {
-                books.remove(book);
-                System.out.println("성공적으로 삭제되었습니다.");
-            } else {
-                System.out.println("삭제할 도서를 찾지 못했습니다.");
+
+        public void deleteBook () {
+            for (Book book : books) {
+                if (book.getTitle().equals(book.getAuthor())) {
+                    books.remove(book);
+                    System.out.println("성공적으로 삭제되었습니다.");
+                } else {
+                    System.out.println("삭제할 도서를 찾지 못했습니다.");
+                }
             }
         }
     }
