@@ -6,6 +6,8 @@ public class FileReadWriteRun {
     public static void main(String[] args) {
         FileReadWrite frw = new FileReadWrite();
         //frw.method1();
-        frw.method2();
+        //frw.method2();
+        //frw.method3();
+        frw.method4();
     }
 }
