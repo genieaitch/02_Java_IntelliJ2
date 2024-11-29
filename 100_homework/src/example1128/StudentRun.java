@@ -2,19 +2,24 @@ package example1128;
 
 public class StudentRun {
     public static void main(String[] args) {
-        Student student1 = new Student("김길동","자바", 100);
-        Student student2 = new Student("박길동","디비",50);
-        Student student3 = new Student("이길동", "화면", 85);
-        Student student4 = new Student("정길동","서버",60);
-        Student student5 = new Student("홍길동","자바",20);
+        StudentController sc = new StudentController();
 
         System.out.println("========학생 정보 출력========");
-        System.out.println(student1);
-        System.out.println(student2);
-        System.out.println(student3);
-        System.out.println(student4);
-        System.out.println(student5);
-        System.out.println(student5);
+        for (Student s : sc.getStudents()) {
+            System.out.println(s);
+        }
+
+        //학생 성적 출력
+        System.out.println("========학생 성적 출력========");
+        double[] scores = sc.avgScore();
+        System.out.println("학생 점수 합계 : "+(int)scores[0]);
+        System.out.println("학생 점수 평균 : "+(int)scores[1]);
+
+        //성적 결과 출력
+        System.out.println("========학생 결과 출력========");
+        for(Student s : sc.getStudents()){
+            String result = s.getScore() >= StudentController.CUT_LINE ? "통과":"재시험";
+            System.out.println(s.getName() + "학생은" + result + " 입니다.");
+        }
     }
-    //학생 데이터 5개 만들고 결과 확인
 }

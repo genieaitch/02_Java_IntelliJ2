@@ -45,7 +45,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "이름 : "+ name + "/" +"과목 : " + subject + "/" + "점수 : " + score;
+        return "이름 : "+ name + "/ " +"과목 : " + subject + "/ " + "점수 : " + score;
     }
 
 }
